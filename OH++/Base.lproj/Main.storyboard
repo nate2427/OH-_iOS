@@ -62,6 +62,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpoAction:" destination="B3J-6Z-dmQ" eventType="touchUpInside" id="T3Y-7V-bec"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" highlightedImage="Image" translatesAutoresizingMaskIntoConstraints="NO" id="cyT-2a-niY">
                                 <rect key="frame" x="67" y="141" width="241" height="128"/>
@@ -178,6 +181,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="backToLoginAction:" destination="h5N-LW-qed" eventType="touchUpInside" id="Chf-GI-2Uv"/>
                                     <action selector="signUpAction:" destination="h5N-LW-qed" eventType="touchUpInside" id="A1H-pe-pbu"/>
                                 </connections>
                             </button>

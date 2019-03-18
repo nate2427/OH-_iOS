@@ -64,6 +64,11 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func backToLoginAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "SignUpToLoginSegue", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
