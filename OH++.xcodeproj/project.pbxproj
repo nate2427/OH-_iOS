@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C4656751F639F628E600AEEA /* Pods_OH__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFC651028B7B3F054F9EBFD /* Pods_OH__.framework */; };
 		E05648BD223AFDD70043E386 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05648BC223AFDD70043E386 /* SignUpViewController.swift */; };
+		E0570750224130BB003F0C8F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E057074F224130BB003F0C8F /* ProfileModel.swift */; };
+		E057075422413AFA003F0C8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E057075322413AFA003F0C8F /* ProfileViewController.swift */; };
 		E0C3615B222DF60C001C39DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C3615A222DF60C001C39DB /* AppDelegate.swift */; };
-		E0C3615D222DF60C001C39DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C3615C222DF60C001C39DB /* FirstViewController.swift */; };
-		E0C3615F222DF60C001C39DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C3615E222DF60C001C39DB /* SecondViewController.swift */; };
 		E0C36162222DF60C001C39DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C36160222DF60C001C39DB /* Main.storyboard */; };
 		E0C36164222DF60D001C39DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C36163222DF60D001C39DB /* Assets.xcassets */; };
 		E0C36167222DF60D001C39DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C36165222DF60D001C39DB /* LaunchScreen.storyboard */; };
@@ -24,10 +24,10 @@
 		86D3A73B9A598167E204F84C /* Pods-OH++.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OH++.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OH++/Pods-OH++.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FB45E3D4D1D4CBF3B4973 /* Pods-OH++.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OH++.release.xcconfig"; path = "Pods/Target Support Files/Pods-OH++/Pods-OH++.release.xcconfig"; sourceTree = "<group>"; };
 		E05648BC223AFDD70043E386 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E057074F224130BB003F0C8F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E057075322413AFA003F0C8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0C36157222DF60C001C39DB /* OH++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OH++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C3615A222DF60C001C39DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0C3615C222DF60C001C39DB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E0C3615E222DF60C001C39DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E0C36161222DF60C001C39DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0C36163222DF60D001C39DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0C36166222DF60D001C39DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,15 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				E0C3615A222DF60C001C39DB /* AppDelegate.swift */,
-				E0C3615C222DF60C001C39DB /* FirstViewController.swift */,
-				E0C3615E222DF60C001C39DB /* SecondViewController.swift */,
 				E0C36170222E18B3001C39DB /* GoogleService-Info.plist */,
-				E0C36160222DF60C001C39DB /* Main.storyboard */,
 				E05648BC223AFDD70043E386 /* SignUpViewController.swift */,
 				E0C3616E222E1448001C39DB /* LoginViewController.swift */,
+				E057075322413AFA003F0C8F /* ProfileViewController.swift */,
+				E057074F224130BB003F0C8F /* ProfileModel.swift */,
 				E0C36163222DF60D001C39DB /* Assets.xcassets */,
-				E0C36165222DF60D001C39DB /* LaunchScreen.storyboard */,
 				E0C36168222DF60D001C39DB /* Info.plist */,
+				E0C36160222DF60C001C39DB /* Main.storyboard */,
+				E0C36165222DF60D001C39DB /* LaunchScreen.storyboard */,
 			);
 			path = "OH++";
 			sourceTree = "<group>";
@@ -214,14 +214,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OH++/Pods-OH++-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,9 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C3616F222E1448001C39DB /* LoginViewController.swift in Sources */,
-				E0C3615F222DF60C001C39DB /* SecondViewController.swift in Sources */,
 				E0C3615B222DF60C001C39DB /* AppDelegate.swift in Sources */,
-				E0C3615D222DF60C001C39DB /* FirstViewController.swift in Sources */,
+				E057075422413AFA003F0C8F /* ProfileViewController.swift in Sources */,
+				E0570750224130BB003F0C8F /* ProfileModel.swift in Sources */,
 				E05648BD223AFDD70043E386 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

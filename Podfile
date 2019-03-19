@@ -8,4 +8,5 @@ target 'OH++' do
   # Pods for OH++
   pod 'Firebase/Core'
   pod 'FirebaseUI/Auth', '~> 4.0'
+  pod 'Firebase/Firestore'
 end

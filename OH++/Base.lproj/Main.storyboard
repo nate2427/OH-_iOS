@@ -158,12 +158,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK7-L4-b4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="583.74384236453204"/>
+            <point key="canvasLocation" x="1273" y="642"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ULh-mi-DoD">
             <objects>
-                <viewController title="Profile View Controller" id="c5E-xY-duK" sceneMemberID="viewController">
+                <viewController title="Profile View Controller" id="c5E-xY-duK" customClass="ProfileViewController" customModule="OH__" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zAE-Mp-3QX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
